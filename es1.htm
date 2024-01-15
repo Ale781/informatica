@@ -1,16 +1,27 @@
-<!DOCTYPE html>
-<html>
+DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
 <body>
+    <button onclick="stampaScritta()">Bottone</button>
+    <div id="output"></div>
+   <script>
 
-<button onclick="printCiao()">bottone</button>
+     function stampaScritta() {
+         var output = document.getElementById("output");
 
-<script>
-function printCiao() {
-  for (var i = 0; i < 100; i++) {
-    console.log("ciao");
-  }
-}
-</script>
+         for (var i = 1; i <= 100; i++) {
+             var scritta = document.createElement("p");
+             scritta.innerText = "juve merda " + i;
+             output.appendChild(scritta);
+         }
+     }
 
+     
+   </script>
 </body>
 </html>
