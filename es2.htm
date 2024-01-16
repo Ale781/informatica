@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Esercizio Numeri</title>
+  <script>
+    function stampaNumeri() {
+      var numero = parseInt(document.getElementById("inputNumero").value);
+      var output = "";
+      
+      for (var i = 1; i <= numero; i++) {
+        output += i + " ";
+      }
+      
+      var perc = numero * 0.1;
+      
+      output += "<br><br>10% del numero: " + perc;
+      
+      document.getElementById("outputNumeri").innerHTML = output;
+    }
+  </script>
+</head>
+<body>
+  <label for="inputNumero">Inserisci un numero:</label>
+  <input type="number" id="inputNumero">
+  <button onclick="stampaNumeri()">Stampa</button>
+  
+  <div id="outputNumeri"></div>
+</body>
+</html>
