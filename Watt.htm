@@ -6,28 +6,20 @@
   <title>Document</title>
 </head>
 
-
-
-
 <style>
-
-#Watt{
+  #Watt {
     background-color: rgb(164, 164, 164);
     margin: 10px;
     color: white;
-   height: 150px;
-   width: 300px;
-   border-style: solid;
+    height: 150px;
+    width: 300px;
+    border-style: solid;
     border: 1px;
     border-color: black;
+  }
+</style>
 
-
-
-
-}
-
-    </style>
-  <body>
+<body>
   <div id="Watt"> 
     <label for="Ppannelli_input">Potenza pannelli:</label>
     <input type="text" id="Ppannelli_input" name="Ppannelli_input">
@@ -35,26 +27,21 @@
     <label for="Npannelli_input">Numero pannelli:</label>
     <input type="text" id="Npannelli_input" name="Npannelli_input">
 
-<button onclick="Ptot()">Calcola</button>
+    <button onclick="Ptot()">Calcola</button>
 
-<p id="out">
-</p>
-
+    <p id="out"></p>
   </div>
 
   <script>
-function Ptot() {
-let Ppannelli=  document.getElementById("Ppannelli_input").value;
-let Npannelli=  document.getElementById("Npannelli_input").value;
-let Ptotale = Ppannelli * Npannelli
-console.log(Ppannelli)
-console.log(Ptotale)
-console.log(Npannelli)
-document.getElementById("out").innerHTML=Ppannelli;
-
-
-}
-
+    function Ptot() {
+      let Ppannelli = document.getElementById("Ppannelli_input").value;
+      let Npannelli = document.getElementById("Npannelli_input").value;
+      let Ptotale = Ppannelli * Npannelli;
+      console.log(Ppannelli);
+      console.log(Ptotale);
+      console.log(Npannelli);
+      document.getElementById("out").innerHTML = Ptotale;
+    }
   </script>
 </body>
 </html>
