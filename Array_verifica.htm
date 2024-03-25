@@ -1,1 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+</head>
+<body>
+<button onclick="Soggetto()">Aggiungi Soggetto</button>
+<button onclick="Verbo()">Aggiungi Verbo</button>
+<button onclick="Complemento()">Aggiungi Complemento</button>
+<button onclick="creaFrase()">Crea Frase</button>
+
+<div id="output"></div>
+
+<script>
+let soggetti = [];
+let verbi = [];
+let complementi = [];
+
+function Soggetto() {
+    let soggetto = prompt("Inserisci un soggetto:");
+    soggetti.push(soggetto);
+    console.log(soggetti);
+}
+
+function Verbo() {
+    let verbo = prompt("Inserisci un verbo:");
+    verbi.push(verbo);
+    console.log(verbi);
+}
+
+function Complemento() {
+    let complemento = prompt("Inserisci un complemento:");
+    complementi.push(complemento);
+    console.log(complementi);
+}
+
+function creaFrase() {
+    let randomSoggetto = soggetti[Math.floor(Math.random() * soggetti.length)];
+    let randomVerbo = verbi[Math.floor(Math.random() * verbi.length)];
+    let randomComplemento = complementi[Math.floor(Math.random() * complementi.length)];
+    let frase = randomSoggetto + " " + randomVerbo + " " + randomComplemento;
+    document.getElementById('output').innerText = frase;
+}
+</script>
+</body>
+</html>
 
