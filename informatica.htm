@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .quadratoRed{
+      background-color: red;
+      color:white;
+      border: 2px solid black;
+      margin: 20px;
+      height: 20px;
+      height: 20px;
+      width: 20px;
+      padding:20px;
+      
+
+    }
+
+    .quadratoBlue{
+      background-color: blue;
+      color:white;
+      border: 2px solid black;
+      margin: 20px;
+      height: 20px;
+      height: 20px;
+      width: 20px;
+      padding:20px;
+      
+
+    }
+
+    </style>
+</head>
+<body>
+    
+    
+
+<script>
+ let numerocausale;
+ for(let i=0; i<100; i++)
+ {
+     numerocausale=Math.floor(Math.random()*100);
+
+     if (numerocausale%2==0)
+      {
+          document.write("   <div class='quadratoRed'>"
+           +numerocausale+ 
+            " </div>")
+
+      }                     
+       else
+       {
+
+        document.write("<div class='quadratoBlue'>"
+           +numerocausale+ 
+            " </div>")
+  }
+ }
+
+
+
+</script>
+</body>
+</html>
