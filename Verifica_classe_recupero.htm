@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quadrati con numeri casuali e numeri primi</title>
+    <style>
+        .Quadrati {
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            line-height: 50px;
+            border: 2px solid black;
+            display: inline-block;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container"></div>
+    <script>
+        function isPrime(num) {
+            if (num < 2) return false;
+            for (let i = 2; i <= Math.sqrt(num); i++) {
+                if (num % i === 0) return false;
+            }
+            return true;
+        }
+
+        function Stampa(n) {
+            const container = document.getElementById('container');
+            for (let i = 1; i <= n; i++) {
+                const Numericausali = Math.floor(Math.random() * 101) + 100;
+                const Quadrati = document.createElement('div');
+                Quadrati.textContent = Numericausali;
+                Quadrati.classList.add('Quadrati');
+                if (Numericausali % 10 === 0) {
+                    Quadrati.style.backgroundColor = 'blue';
+                }
+                if (isPrime(i)) {
+                    Quadrati.style.backgroundColor = 'lightcoral';
+                }
+                container.appendChild(Quadrati);
+            }
+        }
+
+        Stampa(1000);
+    </script>
+</body>
+</html>
